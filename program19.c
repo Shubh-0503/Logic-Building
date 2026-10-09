@@ -31,11 +31,11 @@ int main()
 
     if(bRet == true)
     {
-        printf("It is Even");
+        printf("It is Even Number");
     }
     else
     {
-        printf("It is Oddd");
+        printf("It is Odd Number");
     }
 
   return EXIT_SUCCESS;
