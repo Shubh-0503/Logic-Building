@@ -1,48 +1,3 @@
-/*
-Step 1: Understand the problem statement
-
-step 2: Write the algoritom
-step 3: Decide the Programming Languge
-step 4: write program
-step 5: test the Peofram
-
-
-*/
-
-///////////////////////////////////////////////////////////
-// Step 1: Understand the problem statement
-//          user is going to enter any 2 integers
-//          and we have to perform additions
-///////////////////////////////////////////////////////////
-
-
-
-//////////////////////////////////////////////////////////////
-//    step 2: Write the algoritom
-/*
-        START 
-            Accept first Number  as No1
-            Accept Second Number  as No2
-            Create the variable as Ans to store the result
-            Perform the addition and store into Ans
-            Display the result 
-
-*/
-//
-//////////////////////////////////////////////////////////////
-
-
-//////////////////////////////////////////////////////////////
-//  step 3: Decode the Programming Languge
-//          we select c programming
-//////////////////////////////////////////////////////////////
-
-
-//////////////////////////////////////////////////////////////
-//
-//step 4: write program
-//
-//////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////
@@ -66,8 +21,12 @@ step 5: test the Peofram
 //////////////////////////////////////////////////////////////
 
 #include<stdio.h>
+#include<stdlib.h>
 
-int Addition(int iNo1, int iNo2)
+int Addition(
+                int iNo1,   //First input
+                int iNo2    //Secound input
+            )
 {
     int iAns = 0;
 
@@ -82,10 +41,28 @@ int main()
     int iValue1 = 0, iValue2 = 0, iResult = 0;
     
     printf("Enter First Number : \n");
-    scanf("%d",&iValue1);
+    if(scanf("%d",&iValue1) != 1)
+    {
+        fprintf(stderr,"Unable to proceed as Input is Invalid");
+
+
+        return EXIT_FAILURE;
+
+
+
+    }
 
     printf("Enter Secound Number : \n");
-    scanf("%d",&iValue2);
+    if(scanf("%d",&iValue2) != 1)
+    {
+        fprintf(stderr,"Unable to proceed as Input is Invalid");
+
+
+        return EXIT_FAILURE;
+
+  
+
+    }
     
 
     iResult = Addition(iValue1, iValue2);           
@@ -93,7 +70,7 @@ int main()
     printf("Addition is : %d\n",iResult);
 
 
-    return 0;
+    return EXIT_SUCCESS;
 }
 
 //////////////////////////////////////////////////////////////
